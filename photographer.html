@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
+    </header>
+    <main id="main">
+      <div class="photograph-header">
+        <button class="contact_button" onclick="displayModal()">
+          Contactez-moi
+        </button>
+      </div>
+      <div class="photograph-medias"></div>
+    </main>
+
+    <div id="contact_modal">
+      <div class="modal">
+        <header class="contact-header">
+          <h2>Contactez-moi</h2>
+          <img src="assets/icons/close.svg" onclick="closeModal()" />
+        </header>
+        <form action="index.html" method="get" name="form">
+          <div>
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" id="firstname" />
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" id="lastname" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="textarea">Votre message</label>
+            <textarea name="textarea" id="textarea"></textarea>
+          </div>
+          <button class="contact_button">Envoyer</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/pages/medias.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+  </body>
+</html>
