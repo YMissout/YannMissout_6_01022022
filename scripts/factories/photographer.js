@@ -12,24 +12,47 @@ function photographerFactory(data) {
     img.setAttribute("src", picture);
     const h2 = document.createElement("h2");
     h2.textContent = name;
-    const h3 = document.createElement("h3");
-    h3.textContent = city + ", " + country;
-    const h4 = document.createElement("h4");
-    h4.textContent = tagline;
-    const h5 = document.createElement("h5");
-    h5.textContent = price + "€/jour";
+    const paragrapheCity = document.createElement("p");
+    paragrapheCity.textContent = city + ", " + country;
+    const paragraphePhrase = document.createElement("span");
+    paragraphePhrase.textContent = tagline;
+    const paragraphePrice = document.createElement("div");
+    paragraphePrice.textContent = price + "€/jour";
     article.appendChild(div);
     article.appendChild(lien);
     lien.appendChild(div);
     div.appendChild(img);
     div.appendChild(h2);
-    article.appendChild(h3);
-    article.appendChild(h4);
-    article.appendChild(h5);
+    article.appendChild(paragrapheCity);
+    article.appendChild(paragraphePhrase);
+    article.appendChild(paragraphePrice);
     return article;
+  }
+
+  function getUserCardDOMPage() {
+    const articlePage = document.createElement("section");
+    const divProfil = document.createElement("div");
+    const h1Page = document.createElement("h1");
+    h1Page.textContent = name;
+    const cityPage = document.createElement("p");
+    cityPage.textContent = city + ", " + country;
+    const phrasePage = document.createElement("span");
+    phrasePage.textContent = tagline;
+    const imgPage = document.createElement("img");
+    imgPage.setAttribute("src", picture);
+    articlePage.appendChild(divProfil);
+    divProfil.appendChild(h1Page);
+    divProfil.appendChild(cityPage);
+    divProfil.appendChild(phrasePage);
+
+    articlePage.appendChild(imgPage);
+    return articlePage;
   }
 
   return {
     getUserCardDOM,
+    getUserCardDOMPage,
   };
 }
+
+// cour factory methode
