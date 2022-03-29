@@ -24,6 +24,14 @@
       </div>
       <div class="photograph-medias"></div>
     </main>
+    <div id="trier">
+      <label id="listbox-label" for="trier">Trier par</label>
+      <select id="listbox-container" name="select" id="selection">
+        <option value="popularite">Popularité</option>
+        <option value="date">Date</option>
+        <option value="titre">Titre</option>
+      </select>
+    </div>
 
     <div id="contact_modal">
       <div class="modal">
@@ -31,44 +39,20 @@
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-        <form
-          name="form"
-          method="get"
-          onsubmit="return formValidation()"
-          id="form"
-        >
+        <form action="index.html" method="get" name="form">
           <div>
-            <label for="form-first-name">Prénom</label>
-            <input
-              class="form-control"
-              type="text"
-              id="form-first-name"
-              name="form-first-name"
-              required
-            />
-            <label for="form-last-name">Nom</label>
-            <input
-              class="form-control"
-              type="text"
-              id="form-last-name"
-              name="form-last-name"
-              required
-            />
-            <label for="form-email">Email</label>
-            <input
-              class="form-control"
-              type="email"
-              id="form-email"
-              name="form-email"
-              required
-            />
-            <label for="form-message">Votre message</label>
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" id="firstname" />
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" id="lastname" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="textarea">Votre message</label>
             <input
               class="form-control"
               type="text"
               id="form-message"
               name="form-message"
-              required
             />
           </div>
           <button class="contact_button">Envoyer</button>

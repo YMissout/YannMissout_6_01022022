@@ -38,13 +38,14 @@ function photographerFactory(data) {
     cityPage.textContent = city + ", " + country;
     const phrasePage = document.createElement("span");
     phrasePage.textContent = tagline;
+    const btnContact = document.querySelector(".contact_button");
     const imgPage = document.createElement("img");
     imgPage.setAttribute("src", picture);
     articlePage.appendChild(divProfil);
     divProfil.appendChild(h1Page);
     divProfil.appendChild(cityPage);
     divProfil.appendChild(phrasePage);
-
+    articlePage.appendChild(btnContact);
     articlePage.appendChild(imgPage);
     return articlePage;
   }
