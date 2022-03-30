@@ -16,6 +16,15 @@ header {
   top: 10px;
 }
 
+#texterrorfirstname,
+#texterrorlastname,
+#texterroremail {
+  padding-top: 5px;
+  font-size: 14px;
+  color: rgb(151, 20, 20);
+  font-weight: 400;
+}
+
 .modal {
   border-radius: 5px;
   background-color: #db8876;

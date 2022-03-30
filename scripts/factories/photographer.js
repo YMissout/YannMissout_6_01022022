@@ -50,10 +50,15 @@ function photographerFactory(data) {
     return articlePage;
   }
 
+  function formContactName() {
+    const contactName = document.querySelector(".contact-name");
+    contactName.textContent = name;
+    return contactName;
+  }
+
   return {
     getUserCardDOM,
     getUserCardDOMPage,
+    formContactName,
   };
 }
-
-// cour factory methode
