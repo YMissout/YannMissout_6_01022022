@@ -10,6 +10,7 @@ const getPhotographers = async () => {
 
 const photographerProfilContainer =
   document.querySelector(".photograph-header");
+const contact = document.querySelector(".contact-name");
 
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
@@ -20,6 +21,8 @@ const photographerProfilDisplay = () => {
       const photographerModelPage = photographerFactory(photographer);
       const userCardDOMPage = photographerModelPage.getUserCardDOMPage();
       photographerProfilContainer.appendChild(userCardDOMPage);
+      const contactDisplay = photographerModelPage.getUserContactDOM();
+      contact.appendChild(contactDisplay);
     }
   });
 };

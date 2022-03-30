@@ -50,8 +50,8 @@ function photographerFactory(data) {
     return articlePage;
   }
 
-  function formContactName() {
-    const contactName = document.querySelector(".contact-name");
+  function getUserContactDOM() {
+    const contactName = document.createElement("span");
     contactName.textContent = name;
     return contactName;
   }
@@ -59,6 +59,6 @@ function photographerFactory(data) {
   return {
     getUserCardDOM,
     getUserCardDOMPage,
-    formContactName,
+    getUserContactDOM,
   };
 }
